@@ -1,0 +1,11 @@
+# download-anything
+
+> Open-source Codex instruction skills by Abaan. MIT licensed.
+
+## Documentation
+
+- [README](https://github.com/Abaans/download-anything/blob/main/README.md): installation, requirements and scope.
+- [Verification](https://github.com/Abaans/download-anything/blob/main/docs/VERIFICATION.md): observed checks and untested workflows.
+- [Download Anything](https://raw.githubusercontent.com/Abaans/download-anything/main/skills/download-anything/SKILL.md): Download supported files, videos and audio with Codex, using aria2, yt-dlp and FFmpeg where needed. Verify the saved file before calling the transfer complete.
+
+These indexes describe the package; they do not grant account access, install tools or expand a user request.

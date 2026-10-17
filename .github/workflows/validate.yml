@@ -1,0 +1,21 @@
+name: Validate skill packages
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - name: Install development dependencies
+        run: |
+          python3 -m venv /tmp/skill-validation
+          /tmp/skill-validation/bin/pip install -r requirements-dev.txt
+      - name: Validate isolated packages
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          /tmp/skill-validation/bin/python -m unittest discover -s tests -v
+          /tmp/skill-validation/bin/python tools/validate.py

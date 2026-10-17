@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "name": "download-anything",
+  "version": "0.1.0",
+  "author": {
+    "name": "Mohamed Abaan Abdul Azeez",
+    "url": "https://github.com/Abaans"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/Abaans/download-anything",
+  "kind": "agent-instruction-skills",
+  "tested_agent": "Codex",
+  "skills": [
+    {
+      "name": "download-anything",
+      "display_name": "Download Anything",
+      "description": "Download supported files, videos and audio with Codex, using aria2, yt-dlp and FFmpeg where needed. Verify the saved file before calling the transfer complete.",
+      "path": "skills/download-anything",
+      "entrypoint": "skills/download-anything/SKILL.md",
+      "readme": "skills/download-anything/README.md",
+      "image": "skills/download-anything/assets/download-anything.jpg",
+      "requirements": [
+        "aria2 for direct transfers",
+        "yt-dlp for supported media pages; FFmpeg and ffprobe for media work",
+        "Authorized browser or connector capabilities for protected sources"
+      ],
+      "example_prompt": "Use $download-anything to save this video at up to 1080p with audio into my Downloads folder.",
+      "documentation_url": "https://github.com/Abaans/download-anything/tree/main/skills/download-anything"
+    }
+  ]
+}

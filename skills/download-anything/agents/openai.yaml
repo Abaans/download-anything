@@ -1,0 +1,4 @@
+interface:
+  display_name: "Download Anything"
+  short_description: "Save files, videos and audio from supported links"
+  default_prompt: "Use $download-anything to save this link and verify the resulting local file."
